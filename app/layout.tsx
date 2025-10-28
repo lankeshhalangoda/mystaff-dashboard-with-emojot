@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "Amthal X Emojot",
+  description: "Amthal HR Management System powered by Emojot",
   generator: "v0.app",
 }
 
