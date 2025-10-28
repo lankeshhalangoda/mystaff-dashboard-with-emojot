@@ -15,6 +15,29 @@ export const metadata: Metadata = {
   title: "Amthal X Emojot",
   description: "Amthal HR Management System powered by Emojot",
   generator: "v0.app",
+  icons: {
+    icon: "/mystaff-logo.png",
+    shortcut: "/mystaff-logo.png",
+    apple: "/mystaff-logo.png",
+  },
+  openGraph: {
+    title: "Amthal X Emojot",
+    description: "Amthal HR Management System powered by Emojot",
+    images: [
+      {
+        url: "/mystaff-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Amthal X Emojot",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amthal X Emojot",
+    description: "Amthal HR Management System powered by Emojot",
+    images: ["/mystaff-logo.png"],
+  },
 }
 
 export default function RootLayout({
