@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   description: "Amthal HR Management System powered by Emojot",
   generator: "v0.app",
   icons: {
-    icon: "/mystaff-logo.png",
-    shortcut: "/mystaff-logo.png",
-    apple: "/mystaff-logo.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Amthal X Emojot",
