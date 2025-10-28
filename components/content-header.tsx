@@ -3,7 +3,7 @@ import { HelpCircle, FileText } from "lucide-react"
 
 export function ContentHeader() {
   return (
-    <div className="flex items-center justify-between px-6 py-4 border-b" style={{ backgroundColor: "#fafafa" }}>
+    <div className="flex items-center justify-between px-4 lg:px-6 xl:px-8 py-3 lg:py-4 border-b" style={{ backgroundColor: "#fafafa" }}>
       <div className="flex items-center gap-3">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mystaff2%20-%20Copy%20%282%29-1Q4PuTMa5MZDJdzqJMH1FeSW0NIPVh.png"
@@ -14,8 +14,8 @@ export function ContentHeader() {
         />
       </div>
 
-      <div className="flex items-center gap-4">
-        <span className="text-sm text-gray-600">
+      <div className="flex items-center gap-2 lg:gap-3 xl:gap-4">
+        <span className="text-xs md:text-sm text-gray-600 hidden sm:inline">
           System Date: <span className="font-medium text-gray-900">01/05/2021</span>
         </span>
 

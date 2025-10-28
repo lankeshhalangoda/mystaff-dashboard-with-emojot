@@ -19,11 +19,11 @@ export function ComplaintDetail({ complaintId, onBack }: ComplaintDetailProps) {
   const [comment, setComment] = useState("")
 
   return (
-    <div className="flex-1 flex overflow-hidden bg-gray-50">
+    <div className="flex-1 flex flex-col lg:flex-row overflow-hidden bg-gray-50">
       {/* Main Content */}
-      <div className="flex-1 overflow-y-auto p-6">
+      <div className="flex-1 overflow-y-auto p-4 md:p-6">
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-4">
+        <div className="bg-white rounded-lg shadow-sm p-4 md:p-6 mb-4">
           <h1 className="text-xl font-semibold text-gray-900 mb-2">Poor Room Service Response Time</h1>
           <p className="text-sm text-gray-500">Last Updated - 08-Jan-2025 | 09:18 AM</p>
 
@@ -50,9 +50,9 @@ export function ComplaintDetail({ complaintId, onBack }: ComplaintDetailProps) {
         {/* Tabs */}
         <div className="bg-white rounded-lg shadow-sm">
           <div className="border-b border-gray-200">
-            <div className="flex">
+            <div className="flex overflow-x-auto">
               <button
-                className={`px-6 py-3 text-sm font-medium border-b-2 ${
+                className={`px-4 md:px-6 py-3 text-xs md:text-sm font-medium border-b-2 whitespace-nowrap ${
                   activeTab === "comments"
                     ? "border-blue-500 text-blue-600"
                     : "border-transparent text-gray-500 hover:text-gray-700"
@@ -62,7 +62,7 @@ export function ComplaintDetail({ complaintId, onBack }: ComplaintDetailProps) {
                 Comments
               </button>
               <button
-                className={`px-6 py-3 text-sm font-medium border-b-2 ${
+                className={`px-4 md:px-6 py-3 text-xs md:text-sm font-medium border-b-2 whitespace-nowrap ${
                   activeTab === "journey"
                     ? "border-blue-500 text-blue-600"
                     : "border-transparent text-gray-500 hover:text-gray-700"
@@ -76,16 +76,16 @@ export function ComplaintDetail({ complaintId, onBack }: ComplaintDetailProps) {
 
           {/* Comments Tab Content */}
           {activeTab === "comments" && (
-            <div className="p-6">
+            <div className="p-4 md:p-6">
               {/* Comment Input */}
-              <div className="mb-6">
+              <div className="mb-4 md:mb-6">
                 <Textarea
                   placeholder="Add your comment here..."
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
-                  className="min-h-[100px] mb-3"
+                  className="min-h-[80px] md:min-h-[100px] mb-3 text-sm"
                 />
-                <div className="flex items-center justify-between flex-wrap gap-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                   <div className="flex items-center gap-2 flex-wrap">
                     <Button variant="outline" size="sm" className="text-xs bg-transparent">
                       👍 Looks good!
@@ -132,7 +132,7 @@ export function ComplaintDetail({ complaintId, onBack }: ComplaintDetailProps) {
       </div>
 
       {/* Right Sidebar */}
-      <div className="w-80 bg-white border-l border-gray-200 overflow-y-auto">
+      <div className="w-full lg:w-80 bg-white border-t lg:border-t-0 lg:border-l border-gray-200 overflow-y-auto flex-shrink-0">
         {/* Status Dropdown */}
         <div className="p-4 border-b">
           <Select defaultValue="resolved">

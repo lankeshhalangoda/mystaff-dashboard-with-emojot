@@ -52,34 +52,37 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
 
   return (
     <aside
-      className={cn("flex flex-col transition-all duration-300", isOpen ? "w-64" : "w-0 overflow-hidden")}
+      className={cn(
+        "flex flex-col transition-all duration-300 overflow-hidden",
+        isOpen ? "w-64 flex-shrink-0" : "w-0"
+      )}
       style={{ backgroundColor: "#272727" }}
     >
-      <div className="p-6 pb-4 bg-white">
+      <div className="px-4 py-3 bg-white flex-shrink-0 flex items-center">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mystaff2%20-%20Copy-UyAaCfScwJBtzUTiIQc3HHYiAU4J3k.png"
           alt="Wolke"
-          width={150}
-          height={40}
-          className="w-auto h-auto"
+          width={120}
+          height={32}
+          className="w-auto h-8 max-w-full"
         />
       </div>
 
-      <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
-        <h2 className="text-sm font-bold text-white">NAVIGATION</h2>
-        <Button variant="ghost" size="icon" onClick={onClose} className="h-6 w-6 text-white hover:bg-white/10">
-          <X className="h-4 w-4" />
+      <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 flex-shrink-0">
+        <h2 className="text-xs font-bold text-white">NAVIGATION</h2>
+        <Button variant="ghost" size="icon" onClick={onClose} className="h-5 w-5 text-white hover:bg-white/10 flex-shrink-0">
+          <X className="h-3 w-3" />
         </Button>
       </div>
 
-      <nav className="flex-1 overflow-y-auto">
+      <nav className="flex-1 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
         <div>
           <Button
             variant="ghost"
-            className="w-full justify-start text-left font-normal text-white hover:bg-white/5 rounded-none px-4 py-3"
+            className="w-full justify-start text-left font-normal text-white hover:bg-white/5 rounded-none px-3 py-2 h-auto whitespace-normal"
             onClick={() => onNavigate("dashboard")}
           >
-            <span className="text-xs">DASHBOARD</span>
+            <span className="text-[10px] break-words">DASHBOARD</span>
           </Button>
         </div>
         <div className="border-b border-white/5" />
@@ -88,11 +91,11 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
           <div key={item.label}>
             <Button
               variant="ghost"
-              className="w-full justify-between text-left font-normal text-white hover:bg-white/5 rounded-none px-4 py-3"
+              className="w-full justify-between text-left font-normal text-white hover:bg-white/5 rounded-none px-3 py-2 h-auto min-h-[36px] whitespace-normal"
               onClick={() => item.hasSubmenu && toggleMenu(item.label)}
             >
-              <span className="text-xs">{item.label}</span>
-              {item.hasSubmenu && <ChevronDown className="h-4 w-4" />}
+              <span className="text-[10px] break-words flex-1 pr-2">{item.label}</span>
+              {item.hasSubmenu && <ChevronDown className="h-3 w-3 flex-shrink-0" />}
             </Button>
             {index < menuItems.length - 1 && <div className="border-b border-white/5" />}
           </div>
@@ -102,12 +105,12 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
         <div>
           <Button
             variant="ghost"
-            className="w-full justify-between text-left font-normal text-white hover:bg-white/5 rounded-none px-4 py-3"
+            className="w-full justify-between text-left font-normal text-white hover:bg-white/5 rounded-none px-3 py-2 h-auto min-h-[36px] whitespace-normal"
             onClick={() => toggleMenu("EMOJOT")}
           >
-            <span className="text-xs">EMOJOT</span>
+            <span className="text-[10px] break-words flex-1 pr-2">EMOJOT</span>
             <ChevronDown
-              className={cn("h-4 w-4 transition-transform duration-200", expandedMenu === "EMOJOT" && "rotate-180")}
+              className={cn("h-3 w-3 flex-shrink-0 transition-transform duration-200", expandedMenu === "EMOJOT" && "rotate-180")}
             />
           </Button>
 
@@ -117,12 +120,12 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
                 <div key={submenu}>
                   <Button
                     variant="ghost"
-                    className="w-full justify-start text-left font-normal text-white/80 hover:bg-white/10 rounded-none pl-8 pr-4 py-2.5 text-xs"
+                    className="w-full justify-start text-left font-normal text-white/80 hover:bg-white/10 rounded-none pl-6 pr-3 py-1.5 text-[10px] h-auto min-h-[32px] whitespace-normal leading-snug"
                     onClick={() => handleSubmenuClick(submenu)}
                   >
-                    {submenu}
+                    <span className="break-words">{submenu}</span>
                   </Button>
-                  {idx < emojotSubmenus.length - 1 && <div className="border-b border-white/5 mx-4" />}
+                  {idx < emojotSubmenus.length - 1 && <div className="border-b border-white/5 mx-3" />}
                 </div>
               ))}
             </div>
@@ -130,8 +133,8 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
         </div>
       </nav>
 
-      <div className="p-4 text-center">
-        <p className="text-xs text-white/70">
+      <div className="px-3 py-2 text-center flex-shrink-0">
+        <p className="text-[10px] text-white/70 break-words">
           System Date: <span className="text-white">01/05/2021</span>
         </p>
       </div>

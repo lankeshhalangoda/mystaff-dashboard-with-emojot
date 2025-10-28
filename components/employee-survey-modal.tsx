@@ -19,11 +19,19 @@ export function EmployeeSurveyModal({ isOpen, onClose }: EmployeeSurveyModalProp
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="p-0 gap-0 w-[720px] h-[780px] max-w-[720px] max-h-[780px]">
+      <DialogContent 
+        className="p-0 gap-0 flex flex-col !w-[450px] !max-w-[450px]" 
+        style={{ 
+          width: '450px !important',
+          maxWidth: '450px !important',
+          height: '95vh',
+          maxHeight: '850px'
+        }}
+      >
         <DialogHeader className="px-6 py-3 border-b bg-white flex-shrink-0">
           <DialogTitle className="text-lg font-semibold">Customer Satisfaction Survey</DialogTitle>
         </DialogHeader>
-        <div className="w-full h-[calc(780px-48px)] overflow-hidden">
+        <div className="flex-1 w-full overflow-auto bg-white">
           <iframe
             key={iframeKey}
             src={`https://emojot.com/csatamthaldemo?t=${iframeKey}`}

@@ -19,11 +19,11 @@ const deductions = [
 export function Payroll() {
   return (
     <section className="bg-white rounded-lg shadow-sm">
-      <div className="px-6 py-4 border-b border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900">Payroll</h2>
+      <div className="px-4 lg:px-6 py-3 lg:py-4 border-b border-gray-200">
+        <h2 className="text-xl lg:text-2xl font-bold text-gray-900">Payroll</h2>
       </div>
-      <CardContent className="p-6 space-y-5">
-        <div className="flex items-center justify-between">
+      <CardContent className="p-3 sm:p-4 lg:p-6 space-y-3 sm:space-y-4 lg:space-y-5">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <span className="text-sm font-medium text-gray-700">Select Payslip Date:</span>
             <Select defaultValue="30/06/2021">
@@ -43,11 +43,11 @@ export function Payroll() {
           </Button>
         </div>
 
-        <div className="text-center text-sm py-3 border-y border-gray-200 bg-gray-50 font-medium text-gray-900">
+        <div className="text-center text-sm py-2.5 lg:py-3 border-y border-gray-200 bg-gray-50 font-medium text-gray-900">
           Salary for the month of (30/06/2021)
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-6 xl:gap-8">
           <div>
             <h3 className="font-semibold text-base mb-4 pb-2 border-b-2 border-gray-900 text-gray-900">Earnings</h3>
             <div className="space-y-2.5">

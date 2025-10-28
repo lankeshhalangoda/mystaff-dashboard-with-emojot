@@ -58,11 +58,11 @@ const employees = [
 export function EmployeeFile() {
   return (
     <section className="bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="px-6 py-4 border-b border-gray-300 bg-white">
-        <h2 className="text-2xl font-bold text-gray-900">Employee File</h2>
+      <div className="px-4 lg:px-6 py-3 lg:py-4 border-b border-gray-300 bg-white">
+        <h2 className="text-xl lg:text-2xl font-bold text-gray-900">Employee File</h2>
       </div>
 
-      <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gray-50">
+      <div className="p-3 sm:p-4 lg:p-6 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 bg-gray-50">
         {employees.map((employee) => (
           <Card
             key={employee.id}

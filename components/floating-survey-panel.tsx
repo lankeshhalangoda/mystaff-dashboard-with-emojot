@@ -10,19 +10,19 @@ export function FloatingSurveyPanel() {
   return (
     <>
       <div
-        className={`fixed bottom-0 right-4 z-50 transition-transform duration-300 ease-in-out ${
+        className={`fixed bottom-0 right-2 md:right-4 z-50 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-y-0" : "translate-y-full"
         }`}
-        style={{ width: "490px" }}
+        style={{ width: "min(490px, calc(100vw - 16px))" }}
       >
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="absolute -top-10 right-0 z-10 h-10 w-24 rounded-t-lg rounded-b-none bg-red-600 hover:bg-red-700 shadow-lg text-white"
+          className="absolute -top-10 right-0 z-10 h-10 w-20 md:w-24 rounded-t-lg rounded-b-none bg-red-600 hover:bg-red-700 shadow-lg text-white text-xs md:text-sm"
         >
-          {isOpen ? <ChevronDown className="h-5 w-5" /> : <ChevronUp className="h-5 w-5" />}
+          {isOpen ? <ChevronDown className="h-4 w-4 md:h-5 md:w-5" /> : <ChevronUp className="h-4 w-4 md:h-5 md:w-5" />}
         </Button>
 
-        <div className="shadow-2xl overflow-hidden" style={{ width: "490px", height: "240px" }}>
+        <div className="shadow-2xl overflow-hidden" style={{ width: "100%", height: "min(240px, 40vh)" }}>
           <iframe
             src="https://emojot.com/empsatamthaldemo"
             className="border-0"

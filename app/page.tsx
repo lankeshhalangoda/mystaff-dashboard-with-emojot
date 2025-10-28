@@ -44,8 +44,8 @@ export default function Page() {
           {currentPage === "dashboard" && (
             <>
               <ContentHeader />
-              <main className="flex-1 overflow-y-auto p-6 space-y-6">
-                <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+              <main className="flex-1 overflow-y-auto p-3 sm:p-4 lg:p-6 xl:p-8 space-y-4 lg:space-y-6 xl:space-y-8">
+                <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 lg:gap-6 xl:gap-8">
                   <div className="xl:col-span-2">
                     <EmployeeFile />
                   </div>
@@ -53,7 +53,7 @@ export default function Page() {
                     <Dashboard />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-6 xl:gap-8">
                   <Leaves />
                   <Payroll />
                 </div>

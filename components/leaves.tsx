@@ -29,10 +29,10 @@ const weekDays = ["F", "S", "S", "M", "T", "W", "T", "F", "S", "S"]
 export function Leaves() {
   return (
     <section className="bg-white rounded-lg shadow-sm">
-      <div className="px-6 py-4 border-b border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-900">Leaves</h2>
+      <div className="px-4 lg:px-6 py-3 lg:py-4 border-b border-gray-200">
+        <h2 className="text-xl lg:text-2xl font-bold text-gray-900">Leaves</h2>
       </div>
-      <CardContent className="p-6">
+      <CardContent className="p-3 sm:p-4 lg:p-6">
         <div className="flex gap-2 mb-4">
           <button className="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
             <Pencil className="h-4 w-4 text-gray-600" />
@@ -42,8 +42,8 @@ export function Leaves() {
           </button>
         </div>
 
-        <div className="overflow-x-auto">
-          <div className="min-w-[900px] border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <div className="overflow-x-auto -mx-4 md:mx-0">
+          <div className="min-w-[600px] md:min-w-0 border border-gray-200 rounded-lg overflow-hidden shadow-sm">
             {/* Header Row */}
             <div className="flex border-b border-gray-200 bg-gray-50">
               <div className="w-20 p-3 border-r border-gray-200 text-xs font-semibold flex items-center text-gray-900">

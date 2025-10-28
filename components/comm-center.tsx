@@ -128,8 +128,8 @@ export function CommCenter() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto p-5 bg-gray-50">
-        <div className="mb-4 px-4 py-2.5 bg-blue-50 border border-blue-200 rounded text-sm text-blue-700">
+      <div className="flex-1 overflow-y-auto p-3 md:p-5 bg-gray-50">
+        <div className="mb-4 px-3 md:px-4 py-2.5 bg-blue-50 border border-blue-200 rounded text-xs md:text-sm text-blue-700">
           Some features (Contact searching, Uploading, Filters) are not available until you unmask PII data
         </div>
 
@@ -142,45 +142,45 @@ export function CommCenter() {
         </details>
 
         {/* Upload section */}
-        <div className="mb-5 flex items-center gap-3">
-          <span className="text-sm text-gray-700">Upload customer data</span>
-          <span className="text-sm text-gray-600">
+        <div className="mb-5 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+          <span className="text-xs md:text-sm text-gray-700 whitespace-nowrap">Upload customer data</span>
+          <span className="text-xs md:text-sm text-gray-600">
             Choose CSV (or{" "}
             <a href="#" className="text-teal-600 hover:underline">
               Download sample csv
             </a>
             )
           </span>
-          <button className="px-4 py-1.5 bg-teal-500 hover:bg-teal-600 text-white text-sm rounded">Upload</button>
+          <button className="px-4 py-1.5 bg-teal-500 hover:bg-teal-600 text-white text-xs md:text-sm rounded">Upload</button>
         </div>
 
-        <div className="mb-4 flex items-center justify-between bg-white border border-gray-200 rounded px-3 py-2">
-          <div className="flex items-center gap-2">
-            <button className="p-1.5 hover:bg-gray-100 rounded">
+        <div className="mb-4 flex flex-col md:flex-row items-start md:items-center justify-between bg-white border border-gray-200 rounded px-3 py-2 gap-3 md:gap-0">
+          <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto">
+            <button className="p-1.5 hover:bg-gray-100 rounded flex-shrink-0">
               <RefreshCw className="h-4 w-4 text-gray-600" />
             </button>
-            <button className="p-1.5 hover:bg-gray-100 rounded">
+            <button className="p-1.5 hover:bg-gray-100 rounded flex-shrink-0">
               <Edit className="h-4 w-4 text-gray-600" />
             </button>
-            <input type="checkbox" className="h-4 w-4" />
-            <button className="flex items-center gap-1 px-2 py-1 hover:bg-gray-100 rounded text-sm text-gray-700">
+            <input type="checkbox" className="h-4 w-4 flex-shrink-0" />
+            <button className="hidden lg:flex items-center gap-1 px-2 py-1 hover:bg-gray-100 rounded text-xs md:text-sm text-gray-700 whitespace-nowrap">
               <Mail className="h-4 w-4" />
               Compose
             </button>
-            <button className="p-1.5 hover:bg-gray-100 rounded">
+            <button className="p-1.5 hover:bg-gray-100 rounded flex-shrink-0">
               <Edit className="h-4 w-4 text-gray-600" />
             </button>
-            <button className="p-1.5 hover:bg-gray-100 rounded">
+            <button className="p-1.5 hover:bg-gray-100 rounded flex-shrink-0">
               <Grid3x3 className="h-4 w-4 text-gray-600" />
             </button>
-            <button className="p-1.5 hover:bg-gray-100 rounded">
+            <button className="p-1.5 hover:bg-gray-100 rounded flex-shrink-0">
               <Trash2 className="h-4 w-4 text-gray-600" />
             </button>
-            <button className="flex items-center gap-1 px-2 py-1 hover:bg-gray-100 rounded text-sm text-gray-700">
+            <button className="hidden lg:flex items-center gap-1 px-2 py-1 hover:bg-gray-100 rounded text-xs md:text-sm text-gray-700 whitespace-nowrap">
               <Eye className="h-4 w-4" />
               Columns
             </button>
-            <button className="flex items-center gap-1 px-2 py-1 hover:bg-gray-100 rounded text-sm text-gray-700">
+            <button className="hidden lg:flex items-center gap-1 px-2 py-1 hover:bg-gray-100 rounded text-xs md:text-sm text-gray-700 whitespace-nowrap">
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
@@ -191,10 +191,10 @@ export function CommCenter() {
               </svg>
               CSV
             </button>
-            <span className="text-xs text-gray-600 ml-1">List selected</span>
+            <span className="hidden lg:inline text-xs text-gray-600 ml-1 whitespace-nowrap">List selected</span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-shrink-0">
             <button className="px-3 py-1 border border-gray-300 rounded text-xs text-gray-700 hover:bg-gray-50">
               Save to list
             </button>
@@ -211,8 +211,8 @@ export function CommCenter() {
         </div>
 
         {/* Search */}
-        <div className="mb-4 flex items-center gap-2 justify-end">
-          <select className="border border-gray-300 rounded px-3 py-1.5 text-sm">
+        <div className="mb-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:justify-end">
+          <select className="border border-gray-300 rounded px-3 py-1.5 text-xs md:text-sm">
             <option>Telephone</option>
             <option>Name</option>
             <option>Email</option>
@@ -221,16 +221,16 @@ export function CommCenter() {
             <input
               type="text"
               placeholder="Search value..."
-              className="border border-gray-300 rounded-l px-3 py-1.5 text-sm w-64"
+              className="border border-gray-300 rounded-l px-3 py-1.5 text-xs md:text-sm w-full sm:w-64"
             />
-            <button className="px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-r">
+            <button className="px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-r flex-shrink-0">
               <Search className="h-4 w-4" />
             </button>
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded overflow-hidden">
-          <table className="w-full">
+        <div className="bg-white border border-gray-200 rounded overflow-hidden overflow-x-auto">
+          <table className="w-full min-w-[700px]">
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
                 <th className="w-10 py-2.5 px-3"></th>
@@ -286,9 +286,9 @@ export function CommCenter() {
         </div>
 
         {/* Pagination */}
-        <div className="mt-4 flex items-center justify-between">
-          <div className="text-sm text-gray-600">Showing 1 to 12 of 12 entries</div>
-          <div className="flex items-center gap-3">
+        <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div className="text-xs md:text-sm text-gray-600">Showing 1 to 12 of 12 entries</div>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">Show</span>
               <select className="border border-gray-300 rounded px-2 py-1 text-sm">

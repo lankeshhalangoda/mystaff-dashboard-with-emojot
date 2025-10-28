@@ -185,82 +185,82 @@ export function EmailCampaignModal({ isOpen, onClose }: EmailCampaignModalProps)
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
         className="max-w-[95vw] max-h-[90vh] p-0 gap-0 overflow-hidden"
-        style={{ maxWidth: "2200px", width: "95vw" }}
+        style={{ maxWidth: "1400px", width: "95vw" }}
       >
-        <DialogHeader className="px-6 py-4 border-b bg-white">
-          <DialogTitle className="text-base font-normal text-gray-700">Message configuration</DialogTitle>
+        <DialogHeader className="px-4 md:px-6 py-3 md:py-4 border-b bg-white">
+          <DialogTitle className="text-sm md:text-base font-normal text-gray-700">Message configuration</DialogTitle>
         </DialogHeader>
 
-        <div className="overflow-y-auto px-6 py-6 bg-gray-50 max-h-[calc(90vh-80px)]">
-          <div className="space-y-4 bg-white p-6 rounded">
+        <div className="overflow-y-auto px-4 md:px-6 py-4 md:py-6 bg-gray-50 max-h-[calc(90vh-80px)]">
+          <div className="space-y-4 bg-white p-4 md:p-6 rounded">
             {/* Message type */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">Message type</label>
-              <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">Message type</label>
+              <select className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm bg-white">
                 <option>Email</option>
               </select>
             </div>
 
             {/* Template */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">Template</label>
-              <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">Template</label>
+              <select className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm bg-white">
                 <option>Emojot Team Member 360 Survey Normal Demo</option>
               </select>
             </div>
 
             {/* Survey to embed */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">Survey to embed</label>
-              <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">Survey to embed</label>
+              <select className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm bg-white">
                 <option>Emojot Workable v4</option>
               </select>
             </div>
 
             {/* From email */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">From email</label>
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">From email</label>
               <input
                 type="text"
                 defaultValue="noreply@emojot.com"
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm"
               />
             </div>
 
             {/* From name */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">From name</label>
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">From name</label>
               <input
                 type="text"
                 defaultValue="Emojot Workable (Test By Lankesh)"
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm"
               />
             </div>
 
             {/* Reply-To */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">Reply-To</label>
-              <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">Reply-To</label>
+              <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm" />
             </div>
 
             {/* Subject */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">Subject</label>
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">Subject</label>
               <input
                 type="text"
                 defaultValue="Emojot Workable Survey: $subjectName$"
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm"
               />
             </div>
 
             {/* Body* */}
-            <div className="grid grid-cols-[140px_1fr] items-start gap-4">
-              <label className="text-sm text-gray-600 pt-2">Body*</label>
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600 pt-2">Body*</label>
               <div className="border border-gray-300 rounded overflow-hidden bg-white">
                 <iframe
                   srcDoc={emailTemplateHTML}
                   className="w-full border-0"
-                  style={{ height: "800px", minHeight: "800px" }}
+                  style={{ height: "600px", minHeight: "400px" }}
                   title="Email Preview"
                   sandbox="allow-same-origin"
                   onLoad={() => console.log("[v0] Email template iframe loaded")}
@@ -269,42 +269,42 @@ export function EmailCampaignModal({ isOpen, onClose }: EmailCampaignModalProps)
             </div>
 
             {/* Bottom section */}
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4 pt-4">
-              <label className="text-sm text-gray-600">Envelope</label>
-              <div className="flex items-center gap-4 flex-wrap">
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4 pt-4">
+              <label className="text-xs md:text-sm text-gray-600">Envelope</label>
+              <div className="flex items-start md:items-center gap-2 md:gap-4 flex-wrap">
                 <label className="flex items-center gap-2">
                   <input type="checkbox" className="h-4 w-4" />
-                  <span className="text-sm text-gray-600">Anonymous</span>
+                  <span className="text-xs md:text-sm text-gray-600">Anonymous</span>
                 </label>
                 <label className="flex items-center gap-2">
                   <input type="radio" name="timing" defaultChecked className="h-4 w-4 accent-teal-500" />
-                  <span className="text-sm text-gray-600">One time - Survey</span>
+                  <span className="text-xs md:text-sm text-gray-600 whitespace-nowrap">One time - Survey</span>
                 </label>
                 <label className="flex items-center gap-2">
                   <input type="radio" name="timing" className="h-4 w-4" />
-                  <span className="text-sm text-gray-600">One time - Campaign</span>
+                  <span className="text-xs md:text-sm text-gray-600 whitespace-nowrap">One time - Campaign</span>
                 </label>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50 text-gray-700">
+                <button className="px-3 py-1 border border-gray-300 rounded text-xs md:text-sm hover:bg-gray-50 text-gray-700">
                   Continuous
                 </button>
               </div>
             </div>
 
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">360 Feedback</label>
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">360 Feedback</label>
               <input type="checkbox" defaultChecked className="h-4 w-4 accent-teal-500" />
             </div>
 
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">360 Feedback Mode</label>
-              <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">360 Feedback Mode</label>
+              <select className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm bg-white">
                 <option>Exclude self rating</option>
               </select>
             </div>
 
-            <div className="grid grid-cols-[140px_1fr] items-center gap-4">
-              <label className="text-sm text-gray-600">Evaluator List</label>
-              <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] items-start md:items-center gap-2 md:gap-4">
+              <label className="text-xs md:text-sm text-gray-600">Evaluator List</label>
+              <select className="w-full border border-gray-300 rounded px-3 py-2 text-xs md:text-sm bg-white">
                 <option>360_comm</option>
               </select>
             </div>

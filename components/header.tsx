@@ -10,16 +10,16 @@ interface HeaderProps {
 
 export function Header({ onMenuClick }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between px-6 py-2.5" style={{ backgroundColor: "#2e2e2e" }}>
+    <header className="flex items-center justify-between px-4 lg:px-6 xl:px-8 py-2.5 lg:py-3" style={{ backgroundColor: "#2e2e2e" }}>
       <div className="flex items-center">
         <Button variant="ghost" size="icon" className="text-white hover:bg-white/10" onClick={onMenuClick}>
           <Menu className="h-5 w-5" />
         </Button>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 lg:gap-3 xl:gap-4">
         {/* Language selector */}
-        <button className="flex items-center gap-2 text-white hover:bg-white/10 px-2 py-1 rounded">
+        <button className="hidden sm:flex items-center gap-2 text-white hover:bg-white/10 px-2 py-1 rounded">
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
@@ -32,7 +32,7 @@ export function Header({ onMenuClick }: HeaderProps) {
         </button>
 
         {/* Separator */}
-        <div className="h-6 w-px bg-white/30" />
+        <div className="hidden sm:block h-6 w-px bg-white/30" />
 
         {/* Profile section with image, name, and notification badge */}
         <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ export function Header({ onMenuClick }: HeaderProps) {
             <AvatarImage src="/professional-man.jpg" />
             <AvatarFallback className="bg-gray-600 text-white text-xs">NF</AvatarFallback>
           </Avatar>
-          <span className="text-sm font-medium text-white">Nixon Francis Rebeiro</span>
+          <span className="hidden md:inline text-sm font-medium text-white">Nixon Francis Rebeiro</span>
           {/* Horizontally oval notification badge */}
           <div className="flex items-center justify-center rounded-full bg-red-500 px-2.5 py-0.5 min-w-[40px]">
             <span className="text-xs font-bold text-white">70</span>
