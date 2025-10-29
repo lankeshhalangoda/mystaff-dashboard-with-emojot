@@ -29,14 +29,14 @@ export function EmployeeSurveyModal({ isOpen, onClose }: EmployeeSurveyModalProp
         }}
       >
         <DialogHeader className="px-6 py-3 border-b bg-white flex-shrink-0">
-          <DialogTitle className="text-lg font-semibold">Customer Satisfaction Survey</DialogTitle>
+          <DialogTitle className="text-lg font-semibold">Employee Satisfaction Survey</DialogTitle>
         </DialogHeader>
         <div className="flex-1 w-full overflow-auto bg-white">
           <iframe
             key={iframeKey}
             src={`https://emojot.com/employeepulsedemo?t=${iframeKey}`}
             className="w-full h-full border-0"
-            title="Customer Satisfaction Survey"
+            title="Employee Satisfaction Survey"
           />
         </div>
       </DialogContent>
