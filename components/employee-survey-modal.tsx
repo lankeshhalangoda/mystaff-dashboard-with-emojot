@@ -34,7 +34,7 @@ export function EmployeeSurveyModal({ isOpen, onClose }: EmployeeSurveyModalProp
         <div className="flex-1 w-full overflow-auto bg-white">
           <iframe
             key={iframeKey}
-            src={`https://emojot.com/employeepulsedemo?t=${iframeKey}`}
+            src={`https://emojot.com/empsatlankesh?t=${iframeKey}`}
             className="w-full h-full border-0"
             title="Employee Satisfaction Survey"
           />
